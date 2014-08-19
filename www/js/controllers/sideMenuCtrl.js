@@ -16,11 +16,11 @@ define(['angular','services/sideMenuServ'
 					}
 				});
 	  	 }
-		//console.log($ionicSideMenuDelegate);
+		
 		$scope.menuFunc = function(){
 			$ionicSideMenuDelegate.toggleLeft($scope);
 		};
-		
+
 		sideMenuServ.all($scope);
 	});
 });

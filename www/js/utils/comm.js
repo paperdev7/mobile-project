@@ -1,3 +1,6 @@
+function getRemoteServer(){
+	return "http://192.168.0.30:3000";
+}
 //오늘 날짜 yyyy-MM-dd 형식 return
 function getToday(){
 	var today = new Date();

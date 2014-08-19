@@ -1,6 +1,4 @@
-define(['angular','../../app/bower_components/lodash/dist/lodash.underscore.min'
-	    ,'../../app/bower_components/angular-google-maps/dist/angular-google-maps.min'
-], function (angular) {//,'../../app/bower_components/lodash/dist/lodash.underscore.min','../../app/bower_components/angular-google-maps/dist/angular-google-maps.min'
+define(['angular','googleMapLodash','googleMap'], function (angular) {//,'../../app/bower_components/lodash/dist/lodash.underscore.min','../../app/bower_components/angular-google-maps/dist/angular-google-maps.min'
 	return angular.module('starter.page02Ctrl', ['google-maps'])
 	// A simple controller that fetches a list of data from a service
 	.controller('page02Ctrl', function($scope,$stateParams, $ionicLoading, $compile,$timeout) {
