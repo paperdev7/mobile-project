@@ -1,10 +1,10 @@
-define(['angular', 'angularIonic',
-        'controllers/sideMenuCtrl','controllers/page01Ctrl','controllers/page02Ctrl'], function (angular) {
+define(['angular', 'angularIonic','nsPopover',
+        'controllers/sideMenuCtrl','controllers/page01Ctrl','controllers/page02Ctrl','controllers/page02_1Ctrl'], function (angular) {
   // Ionic Starter App
 
 
   return angular.module('starter', ['ionic', 'starter.sideMenuCtrl', 
-                                    'starter.page01Ctrl','starter.page02Ctrl'])
+                                    'starter.page01Ctrl','starter.page02Ctrl','starter.page02_1Ctrl'])
 
 
   .config(function($stateProvider, $urlRouterProvider) {
@@ -40,6 +40,17 @@ define(['angular', 'angularIonic',
           'menuContent': {
             templateUrl: 'templates/page02/page02.html',
             controller:'page02Ctrl'
+          }
+        }
+      })
+
+       // the pet tab has its own child nav-view and history
+      .state('side.page02_1', {
+        url: '/page02_1',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/page02/page02_1.html',
+            controller:'page02_1Ctrl'
           }
         }
       });

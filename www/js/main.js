@@ -15,7 +15,8 @@ require.config({
         angularIonic: '../lib/js/ionic-angular',
         text: '../bower_components/requirejs-text/text',
 		googleMapLodash: '../app/bower_components/lodash/dist/lodash.underscore.min',
-	    googleMap : '../app/bower_components/angular-google-maps/dist/angular-google-maps.min'
+	    googleMap : '../app/bower_components/angular-google-maps/dist/angular-google-maps.min',
+        nsPopover : '../lib/nsPopover/nsPopover'
     },
     shim: {
         'angular' : {'exports' : 'angular'},
@@ -26,7 +27,8 @@ require.config({
         'ionic' :  {'exports' : 'ionic'},
         'angularIonic': ['angular', 'ionic','uiRouter', 'angularAnimate', 'angularTouch', 'angularSanitize'],
         'googleMapLodash':['angularIonic'],
-        'googleMap':['googleMapLodash']
+        'googleMap':['googleMapLodash'],
+        'nsPopover':['angularIonic']
     },
     priority: [
         "angular"
