@@ -103,8 +103,8 @@ define(['angular'], function (angular) {//,'../../app/bower_components/lodash/di
 			
 		   //위치 검색
 		   $scope.search = function(){
-		   		//$window.location.href = "#/side/page02_1";
-		   		$state.go('side.page02_1');
+		   		//$window.location.href = "#/tab/page02_1";
+		   		$state.go('tab.page02_1');
 		   };
 
 	});

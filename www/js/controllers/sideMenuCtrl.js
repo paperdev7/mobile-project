@@ -1,7 +1,5 @@
-define(['angular','services/sideMenuServ'
-	 //   ,'../../app/bower_components/lodash/dist/lodash.underscore.min'
-	 //   ,'../../app/bower_components/angular-google-maps/dist/angular-google-maps.min'
-	    ], function (angular) {
+define(['angular','services/sideMenuServ'], 
+	function (angular) {
 	return angular.module('starter.sideMenuCtrl', ['starter.sideMenuServ'])
 
 
@@ -9,7 +7,7 @@ define(['angular','services/sideMenuServ'
 	.controller('sideMenuCtrl', function($rootScope,$window,$scope,$location,$ionicSideMenuDelegate,$ionicLoading,sideMenuServ) {
 		if (userOS.indexOf('Android')!=-1){//page01시 backbutton 클릭 나가기
 			  backBtnFunc(function(){
-					if($location.$$url=="/side/page01/1"){
+					if($location.$$url=="/tab/page01/1"){
 					  exitFunc();
 					}else{
 						$ionicLoading.hide();
@@ -17,11 +15,12 @@ define(['angular','services/sideMenuServ'
 					}
 				});
 	  	 }
-		
+		/*
 		$scope.menuFunc = function(){
 			$ionicSideMenuDelegate.toggleLeft($scope);
 		};
-
+		*/
 		sideMenuServ.all($scope);
+		
 	});
 });

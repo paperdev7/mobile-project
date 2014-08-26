@@ -33,9 +33,9 @@ define(['angular'], function (angular) {//,'../../app/bower_components/lodash/di
 								      +result.address_components[1].long_name+" "+result.address_components[0].long_name;
 			$rootScope.markerTitle   = result.address_components[0].short_name;
 			//console.log($scope.lag+","+$scope.lng);
-			//$window.location.href = "#/side/page02";
-			//$state.go('side.page02', {groupId: -3});
-			$state.go('side.page02',{pid: 2});
+			//$window.location.href = "#/tab/page02";
+			//$state.go('tab.page02', {groupId: -3});
+			$state.go('tab.page02',{pid: 2});
 			//$window.history.go(-1);
 		}
 

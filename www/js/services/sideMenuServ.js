@@ -12,6 +12,7 @@ define(['angular'], function (angular) {
                   if(data.length>0){
                    // scope.$apply(function(){
                       scope.menus = data;
+                      console.log(data);
                     //});
                     if(!getLocalStorage("myIonicDb")){
                       ActiveT.createT();
@@ -22,12 +23,12 @@ define(['angular'], function (angular) {
                   }
               })
               .error(function(error) {
-				 ActiveT.selectT(function(tx,results){
-					var resultLen =  results.rows.length;
-					scope.$apply(function(){
-							 scope.menus = JSON.parse(results.rows.item(0).ETC1);  
-						  });
-				  },'sideMenu');
+          				 ActiveT.selectT(function(tx,results){
+                					var resultLen =  results.rows.length;
+                					scope.$apply(function(){
+                							 scope.menus = JSON.parse(results.rows.item(0).ETC1);  
+                						  });
+                				  },'sideMenu');
              });
     };
     

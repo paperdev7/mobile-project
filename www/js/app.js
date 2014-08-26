@@ -6,7 +6,6 @@ define(['angular', 'angularIonic','nsPopover',
   return angular.module('starter', ['ionic', 'starter.sideMenuCtrl', 
                                     'starter.page01Ctrl','starter.page02Ctrl','starter.page02_1Ctrl'])
 
-
   .config(function($stateProvider, $urlRouterProvider) {
 
     // Ionic uses AngularUI Router which uses the concept of states
@@ -16,28 +15,28 @@ define(['angular', 'angularIonic','nsPopover',
     $stateProvider
 
       // setup an abstract state for the tabs directive
-      .state('side', {
-        url: "/side",
+      .state('tab', {
+        url: "/tab",
         abstract: true,
         templateUrl: "templates/sideMenu/sideMenu.html",
         controller:'sideMenuCtrl'
       })
 
       // the pet tab has its own child nav-view and history
-      .state('side.page01', {
+      .state('tab.page01', {
         url: '/page01/:pid',
         views: {
-          'menuContent': {
+          'talking': {
             templateUrl: 'templates/page01/page01.html',
             controller:'page01Ctrl'
           }
         }
       })
        // the pet tab has its own child nav-view and history
-      .state('side.page02', {
+      .state('tab.page02', {
         url: '/page02/:pid',
         views: {
-          'menuContent': {
+          'map': {
             templateUrl: 'templates/page02/page02.html',
             controller:'page02Ctrl'
           }
@@ -45,10 +44,10 @@ define(['angular', 'angularIonic','nsPopover',
       })
 
        // the pet tab has its own child nav-view and history
-      .state('side.page02_1', {
+      .state('tab.page02_1', {
         url: '/page02_1',
         views: {
-          'menuContent': {
+          'map': {
             templateUrl: 'templates/page02/page02_1.html',
             controller:'page02_1Ctrl'
           }
@@ -56,7 +55,7 @@ define(['angular', 'angularIonic','nsPopover',
       });
 
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/side/page01/1');
+    $urlRouterProvider.otherwise('/tab/page01/1');
 
   });
 });

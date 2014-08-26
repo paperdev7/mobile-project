@@ -1,8 +1,7 @@
+<!--
 <ion-side-menus>
-
   <ion-pane ion-side-menu-content>
     <ion-nav-bar class="bar-stable nav-title-slide-ios7">
-      <!--<ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> Back</ion-nav-back-button>-->
     </ion-nav-bar>
     <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
   </ion-pane>
@@ -20,3 +19,18 @@
     </ion-content>
   </ion-side-menu>
 </ion-side-menus>
+-->
+<ion-tabs class="tabs-icon-only">
+<!--
+  <ion-tab title="{{menu.title}}" icon="icon {{menu.icon}}" ng-repeat="menu in menus"  
+           ng-if="menu.disable==true" href="#/tab/{{menu.url}}/{{menu.pid}}">
+    <ion-nav-view ng-repeat="menu2 in menus" name="{{menu2.name}}"></ion-nav-view>
+  </ion-tab>
+-->
+  <ion-tab title="Talking" icon="icon ion-ios7-people" href="#/tab/page01/1">
+    <ion-nav-view name="talking"></ion-nav-view>
+  </ion-tab>
+  <ion-tab title="지도" icon="icon ion-ios7-navigate" href="#/tab/page02/2">
+    <ion-nav-view name="map"></ion-nav-view>
+  </ion-tab>
+</ion-tabs>

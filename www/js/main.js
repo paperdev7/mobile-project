@@ -13,10 +13,10 @@ require.config({
         uiRouter: '../lib/js/angular-ui/angular-ui-router',
         ionic: '../lib/js/ionic',
         angularIonic: '../lib/js/ionic-angular',
-        text: '../bower_components/requirejs-text/text',
 		googleMapLodash: '../app/bower_components/lodash/dist/lodash.underscore.min',
 	    googleMap : '../app/bower_components/angular-google-maps/dist/angular-google-maps.min',
-        nsPopover : '../lib/nsPopover/nsPopover'
+        nsPopover : '../lib/nsPopover/nsPopover',
+        text: '../bower_components/requirejs-text/text',
     },
     shim: {
         'angular' : {'exports' : 'angular'},
