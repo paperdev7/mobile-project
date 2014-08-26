@@ -22,9 +22,16 @@ define(['angular'], function (angular) {//,'../../app/bower_components/lodash/di
 		};
 
 		//좌표를 얻어 지도에 보여주기
-		$scope.showMap = function(lat,lng){
-			$rootScope.lat = lat;
-			$rootScope.lng = lng;
+		$scope.showMap = function(result){
+			//console.log(result);
+			//값을 최고 scope에 할당 rootScope는 모든 controller service filter directive에서 모두 사용가능
+			$rootScope.lat           = result.geometry.location.k;
+			$rootScope.lng           = result.geometry.location.B;
+			$rootScope.address       = //result.address_components[6].long_name+" "+
+				                       result.address_components[4].long_name+" "
+			                          +result.address_components[3].long_name+" "+result.address_components[2].long_name+" "
+								      +result.address_components[1].long_name+" "+result.address_components[0].long_name;
+			$rootScope.markerTitle   = result.address_components[0].short_name;
 			//console.log($scope.lag+","+$scope.lng);
 			//$window.location.href = "#/side/page02";
 			//$state.go('side.page02', {groupId: -3});

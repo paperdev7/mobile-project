@@ -6,12 +6,13 @@ define(['angular','services/sideMenuServ'
 
 
 	// A simple controller that fetches a list of data from a service
-	.controller('sideMenuCtrl', function($rootScope,$window,$scope,$location,$ionicSideMenuDelegate,sideMenuServ) {
+	.controller('sideMenuCtrl', function($rootScope,$window,$scope,$location,$ionicSideMenuDelegate,$ionicLoading,sideMenuServ) {
 		if (userOS.indexOf('Android')!=-1){//page01시 backbutton 클릭 나가기
 			  backBtnFunc(function(){
 					if($location.$$url=="/side/page01/1"){
 					  exitFunc();
 					}else{
+						$ionicLoading.hide();
 						$window.history.back();
 					}
 				});

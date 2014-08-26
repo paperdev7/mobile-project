@@ -24,18 +24,16 @@
   <ion-content class="has-header">
     <div id="map-canvas" ></div>
   </ion-content>
-  <!--
-   <ion-footer-bar class="bar-dark">
+  <ion-footer-bar class="bar-dark">
       <a ng-click="getCurrent()" class="button button-icon icon ion-navigate">Find Me</a>
-    </ion-footer-bar>
-    -->
+  </ion-footer-bar>
 </ion-view>
 <script type="text/ng-template" id="moreMenu">
   <div class="triangle"></div>
   <div class="ns-popover-tooltip" style="width:100px;">
     <div class="list" style="margin-top:0;margin-bottom:0;">
-      <a class="item" ng-click="hidePopover();search();"> 搜索 </a>
-      <a class="item" ng-click="hidePopover();sort();"> 排序 </a>
+      <a class="item" ng-click="hidePopover();search();"> 지역검색 </a>
+      <a class="item" ng-click="hidePopover();sort();"> 길찾기 </a>
     </div>
   </div>
 </script>
