@@ -1,3 +1,6 @@
+var maps = {
+	key:"AIzaSyA5FyN62tRGDOVTRJeLjjGUnGrlSvrnIfc"
+};
 function getRemoteServer(){
 	return "http://192.168.10.101:3000";
 }

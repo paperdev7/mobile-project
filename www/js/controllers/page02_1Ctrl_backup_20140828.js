@@ -10,7 +10,7 @@ define(['angular'], function (angular) {//,'../../app/bower_components/lodash/di
 		$scope.changeAddress = function(addr){
 			$scope.geocoder = new google.maps.Geocoder();
 			 $scope.geocoder.geocode({  
-		        'address': addr ,'region':'kr'
+		        'address': addr 
 			    }, function(results, status){  
 			        if (status == google.maps.GeocoderStatus.OK) {  
 			           $scope.addressResults = results;

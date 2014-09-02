@@ -7,7 +7,7 @@ define(['angular','services/sideMenuServ'],
 	.controller('sideMenuCtrl', function($rootScope,$window,$scope,$location,$ionicSideMenuDelegate,$ionicLoading,sideMenuServ) {
 		if (userOS.indexOf('Android')!=-1){//page01시 backbutton 클릭 나가기
 			  backBtnFunc(function(){
-					if($location.$$url=="/tab/page01/1"){
+					if($location.$$url=="/tab/page01"){
 					  exitFunc();
 					}else{
 						$ionicLoading.hide();
@@ -20,7 +20,7 @@ define(['angular','services/sideMenuServ'],
 			$ionicSideMenuDelegate.toggleLeft($scope);
 		};
 		*/
-		sideMenuServ.all($scope);
+		//sideMenuServ.all($scope);
 		
 	});
 });

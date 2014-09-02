@@ -1,43 +1,96 @@
  <style>
-      #map-canvas {
-        width: 100%;
-        height: 100%;
+  #map-canvas {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px
+  }
+
+  .scroll {
+    height: 100%;
+  }
+
+  .controls {
+    margin-top: 16px;
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 32px;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  #pac-input {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    text-overflow: ellipsis;
+    position: absolute;
+    top: 0px;
+    left: 18%;
+   width:200px;
+    z-index: 5;
+    padding: 0 11px 0 15px;
+  }
+
+  #pac-input:focus {
+        border-color: #4d90fe;
+        margin-left: -1px;
+        padding-left: 14px;  /* Regular padding-left + 1. */
       }
 
-      .scroll {
-        height: 100%;
-      }
-    </style>
-<ion-view title="{{menus[menuId].title}}">
+  .pac-container {
+    font-family: Roboto;
+  }
 
-  <ion-nav-buttons side="left">
-    <button ng-click="getCurrent()" class="button button-icon icon ion-navigate"></button>
-  </ion-nav-buttons>
+</style>
+
+<ion-side-menus>
   
-  <ion-nav-buttons side="right">
-    <button class="button button-icon icon ion-more"
-            ns-popover
-            ns-popover-template="moreMenu"
-            ns-popover-trigger="click"
-            ns-popover-theme="ns-popover-list-theme"
-            ns-popover-placement="bottom|right"
-            ns-popover-timeout="2"></button>
-  </ion-nav-buttons>
-  <ion-content class="has-header">
-    <div id="map-canvas" ></div>
-  </ion-content>
+  <ion-side-menu-content>
+
+     <ion-header-bar class="bar-positive">
+      <button ng-click="getCurrent()" class="button button-icon icon ion-navigate"></button>
+        <h1 class="title">지도</h1>
+      <button class="button button-icon icon ion-more"
+                ns-popover
+                ns-popover-template="moreMenu"
+                ns-popover-trigger="click"
+                ns-popover-theme="ns-popover-list-theme"
+                ns-popover-placement="bottom|right"
+                ns-popover-timeout="2"></button>
+      
+    </ion-header-bar>
+    <ion-content class="has-header" on-swipe-right="onSwipeRight()">
+      <input type="search" id="pac-input" placeholder="Search" class="controls">
+      <div id="map-canvas" ></div>
+    </ion-content>
+
+  </ion-side-menu-content> 
+  
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-energized">
+      <h1 class="title">길 안내</h1>
+    </ion-header-bar>
+    <ion-content>
+       <div id="directionsPanel">길 안내가 없습니다.</div>
+    </ion-content>
+  </ion-side-menu>
+  
+</ion-side-menus>
   <!--
   <ion-footer-bar class="bar-dark">
       <a ng-click="getCurrent()" class="button button-icon icon ion-navigate">Find Me</a>
   </ion-footer-bar>
   -->
-</ion-view>
 <script type="text/ng-template" id="moreMenu">
   <div class="triangle"></div>
   <div class="ns-popover-tooltip" style="width:100px;">
     <div class="list" style="margin-top:0;margin-bottom:0;">
-      <a class="item" ng-click="hidePopover();search();"> 지역검색 </a>
-      <a class="item" ng-click="hidePopover();sort();"> 길찾기 </a>
+      <a class="item" ng-click="hidePopover();goPage02_1();"> 지역검색 </a>
+      <a class="item" ng-click="hidePopover();goPage02_2();"> 길찾기 </a>
     </div>
   </div>
 </script>
