@@ -1,0 +1,16 @@
+<ion-header-bar class="bar-positive">
+    <button class="button button-icon icon ion-ios7-arrow-back" ng-click="goBack()"></button>
+    <h1 class="title">상세보기</h1>
+</ion-header-bar>
+
+<ion-content class="has-header" padding="true" >
+   <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img ng-src="{{remoteServer+article.files[0].path}}">
+            <div class="caption">
+                <!--<h3>Thumbnail label</h3>-->
+                <p>{{article.content}}</p>
+            </div>
+        </div>
+    </div>
+</ion-content>

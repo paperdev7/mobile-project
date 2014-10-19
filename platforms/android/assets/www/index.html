@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-controller="rootCtr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Ionic Seed App</title>
+
+    <!-- ionic css -->
+    <link href="lib/css/ionic.css" rel="stylesheet">
+    <link href="lib/nsPopover/nsPopover.css" rel="stylesheet">
+    <link href="app/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <!-- your app's css -->
+    <link href="css/app.css" rel="stylesheet">
+
+  </head>
+
+  <body animation="slide-left-right-ios7" class="platform-android platform-cordova platform-webview">
+    <!-- 
+      The nav bar that will be updated as we navigate between views
+      Additional attributes set its look, ion-nav-bar animation and icons
+      Icons provided by Ionicons: http://ionicons.com/ 
+    -->
+    <ion-nav-bar type="bar-positive" 
+             animation="nav-title-slide-ios7" 
+             back-button-type="button-icon button-clear" 
+             back-button-icon="ion-ios7-arrow-back"></ion-nav-bar>
+
+    <!-- 
+      The views will be rendered in the <ion-nav-view> directive below
+      Templates are in the /templates folder (but you could also
+      have templates inline in this html file if you'd like).
+    -->
+    <ion-nav-view></ion-nav-view>
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5FyN62tRGDOVTRJeLjjGUnGrlSvrnIfc&sensor=true&libraries=places"></script><!--&language=zh-CN-->
+    <script src="app/bower_components/jquery-1.11.1/index.js"></script>
+    <script src="app/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/utils/comm.js"></script>
+    <script src="js/utils/database.js"></script>
+    <script src="js/utils/gap.js"></script>
+    <script data-main="js/main" src="lib/js/require.js"></script>
+      <!-- 
+    <script src='https://maps.googleapis.com/maps/api/js?sensor=false'></script>
+   -->
+    <!--
+     <script src="app/bower_components/lodash/dist/lodash.underscore.min.js"></script>
+      <script src="app/bower_components/angular-google-maps/dist/angular-google-maps.min.js"></script>
+      -->
+    <script type="text/javascript">
+     $(document).ready(function(){
+      if (userOS.indexOf('Android')!=-1){
+        document.addEventListener("deviceready", onDeviceReady, false);
+      }
+     });
+    </script>
+  </body>
+</html>
