@@ -1,5 +1,4 @@
-define(['angular','services/sideMenuServ'], 
-	function (angular) {
+define(['angular','services/sideMenuServ'], function (angular) {
 	return angular.module('starter.sideMenuCtrl', ['starter.sideMenuServ'])
 
 

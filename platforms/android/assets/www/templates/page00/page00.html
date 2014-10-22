@@ -9,7 +9,7 @@
 <ion-content class="has-header" padding="true" >
     <ion-list>
         <ion-item ng-repeat="item in items">
-            {{item.name}}
+            <a href="{{item.path}}">{{item.name}}</a>
         </ion-item>
     </ion-list>
 </ion-content>

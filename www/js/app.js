@@ -91,7 +91,19 @@ define(['angular','angularResource', 'angularIonic','nsPopover'
               controller:'page00Ctrl'
            }
         }
-      });
+      })
+
+        // 개인정보
+      .state('tab.page00_1', {
+            url: '/page00_1',
+            views: {
+                'info': {
+                    templateUrl: 'templates/page00/page00_1.html',
+                    controller:'page00Ctrl'
+                }
+            }
+        })
+    ;
 
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/tab/page01');

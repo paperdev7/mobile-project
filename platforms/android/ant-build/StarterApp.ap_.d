@@ -546,6 +546,8 @@
 /Users/huang/Sites/hybrid/mobile-project/platforms/android/assets/www/js/controllers/page02Ctrl_bakup_20140828.js \
 /Users/huang/Sites/hybrid/mobile-project/platforms/android/assets/www/js/controllers/page03Ctrl.js \
 /Users/huang/Sites/hybrid/mobile-project/platforms/android/assets/www/js/controllers/sideMenuCtrl.js \
+/Users/huang/Sites/hybrid/mobile-project/platforms/android/assets/www/js/services/page00Serv.js \
+/Users/huang/Sites/hybrid/mobile-project/platforms/android/assets/www/js/services/page00Serv2.js \
 /Users/huang/Sites/hybrid/mobile-project/platforms/android/assets/www/js/services/page01_2Serv.js \
 /Users/huang/Sites/hybrid/mobile-project/platforms/android/assets/www/js/services/page01Serv.js \
 /Users/huang/Sites/hybrid/mobile-project/platforms/android/assets/www/js/services/page02_2Serv.js \
@@ -775,7 +777,7 @@
 /Users/huang/Sites/hybrid/mobile-project/platforms/android/assets/www/templates/page04 \
 /Users/huang/Sites/hybrid/mobile-project/platforms/android/assets/www/templates/sideMenu \
 /Users/huang/Sites/hybrid/mobile-project/platforms/android/assets/www/templates/page00/page00.html \
-/Users/huang/Sites/hybrid/mobile-project/platforms/android/assets/www/templates/page00/page01_2.html \
+/Users/huang/Sites/hybrid/mobile-project/platforms/android/assets/www/templates/page00/page00_1.html \
 /Users/huang/Sites/hybrid/mobile-project/platforms/android/assets/www/templates/page01/page01.html \
 /Users/huang/Sites/hybrid/mobile-project/platforms/android/assets/www/templates/page01/page01_2.html \
 /Users/huang/Sites/hybrid/mobile-project/platforms/android/assets/www/templates/page02/page02.html \
