@@ -14,9 +14,21 @@ define(['angular'], function (angular) {
       { id: 2, name: 'Other', disable:true}
     ];
 
+    var reg = function(){
+        return $resource('articles/:articleId', {
+            articleId: '@_id'
+        }, {
+            update: {
+                method: 'PUT'
+            }
+        });
+    };
     return {
       all: function() {
         return menus;
+      },
+      reg:function(){
+          return reg;
       }
     }
   });

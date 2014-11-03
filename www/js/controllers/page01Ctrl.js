@@ -4,6 +4,12 @@ define(['angular','services/page01Serv'], function (angular) {
 
 	// A simple controller that fetches a list of data from a service
 	.controller('page01Ctrl', function($scope,$stateParams,page01Serv,$state,$rootScope) {
+
+        console.log($rootScope.user);
+        $scope.isLogin = false;
+        if($rootScope.user){
+            $scope.isLogin = true;
+        }
 		$scope.menuId = parseInt($stateParams.pid)-1;
         $scope.articleLists = [];
         //page01Serv.articleLists($scope);
@@ -14,8 +20,8 @@ define(['angular','services/page01Serv'], function (angular) {
         $scope.goDetail = function(id){
             $state.go('tab.page01_2', {articleId: id });
         };
-        $scope.test = function(){
-            alert(2222);
+        $scope.goCreate = function(){
+            $state.go('page01_3', {});
         };
 	});
 });

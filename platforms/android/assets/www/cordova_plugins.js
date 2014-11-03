@@ -430,6 +430,13 @@ module.exports = [
         "merges": [
             "navigator.notification"
         ]
+    },
+    {
+        "file": "plugins/com.synconset.imagepicker/www/imagepicker.js",
+        "id": "com.synconset.imagepicker.ImagePicker",
+        "clobbers": [
+            "plugins.imagePicker"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -453,7 +460,8 @@ module.exports.metadata =
     "org.apache.cordova.network-information": "0.2.11",
     "org.apache.cordova.splashscreen": "0.3.2",
     "org.apache.cordova.statusbar": "0.1.7",
-    "org.apache.cordova.vibration": "0.3.10"
+    "org.apache.cordova.vibration": "0.3.10",
+    "com.synconset.imagepicker": "1.0.4"
 }
 // BOTTOM OF METADATA
 });

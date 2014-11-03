@@ -4,7 +4,7 @@ define(['angular','services/page00Serv'], function (angular) {
 	// A simple controller that fetches a list of data from a service
 	.controller('page00Ctrl', function(page00Serv,$scope,$stateParams,$state,$rootScope) {
 		$scope.items = [
-                        {'name':'회원가입','path':''},
+                        {'name':'회원가입','path':'#/tab/page00_3'},
                         {'name':'로그인','path':'#/tab/page00_1'}
                        ];
 
@@ -13,7 +13,37 @@ define(['angular','services/page00Serv'], function (angular) {
 
         // Register the login() function
         $scope.login = function() {
-            page00Serv.login($scope.user);
+            page00Serv.login($scope.user,function(res){
+                $rootScope.user = res.user;
+                $rootScope.isLogin = true;
+                $state.go('tab.page00_2', {});
+            },function(err){});
         };
-	});
+	})
+    .controller('page00_2Ctrl', function(page00Serv,$scope,$stateParams,$state,$rootScope) {
+           $scope.user = $rootScope.user;
+            console.log($scope.user);
+       })
+    .controller('page00_3Ctrl', function(page00Serv,$scope,$stateParams,$state,$rootScope) {
+            $scope.imageUrl = "";
+            $scope.showImage = function(){
+                window.imagePicker.getPictures(
+                    function(results) {
+                        for (var i = 0; i < results.length; i++) {
+                           // console.log('Image URI: ' + results[i]);
+                            $scope.$apply(function(){
+                                $scope.imageUrl = results[i];
+                            });
+                        }
+                    }, function (error) {
+                        console.log('Error: ' + error);
+                    }, {
+                        maximumImagesCount: 1
+                    }
+                );
+            };
+
+
+       })
+    ;
 });
