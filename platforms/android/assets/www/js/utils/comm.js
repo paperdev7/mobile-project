@@ -2,7 +2,7 @@ var maps = {
 	key:"AIzaSyA5FyN62tRGDOVTRJeLjjGUnGrlSvrnIfc"
 };
 function getRemoteServer(){
-	return "http://192.168.10.102:3000";
+	return "http://192.168.10.103:3000";
 }
 //오늘 날짜 yyyy-MM-dd 형식 return
 function getToday(){

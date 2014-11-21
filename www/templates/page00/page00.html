@@ -1,15 +1,53 @@
-<ion-header-bar class="bar-positive">
-    <h1 class="title">개인 설정</h1>
+<ion-header-bar class="bar-positive" ng-switch on="isLogin">
+
+    <h1 class="title" ng-switch-when="false">개인 설정</h1>
+    <h1 class="title" ng-switch-when="true">나의 정보</h1>
+
 </ion-header-bar>
 <!--
   <ion-nav-buttons side="left">
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
   -->
-<ion-content class="has-header" padding="true" >
+<ion-content class="has-header" padding="true" ng-show="!isLogin">
     <ion-list>
         <ion-item ng-repeat="item in items">
             <a href="{{item.path}}">{{item.name}}</a>
         </ion-item>
     </ion-list>
 </ion-content>
+
+
+<ion-content class="has-header" padding="true" ng-show="isLogin">
+  <div class="list">
+    <div class="row item range range-positive">
+        <div class="col" style="text-align:center;">头像</div>
+        <div class="col col-75" style="text-align:right;">
+            <img ng-src="{{remoteServer+user.files[0].path}}" style="width:80px;height:80px;">
+        </div>
+    </div>
+    <br>
+    <div class="row item range range-positive">
+        <div class="col" style="text-align:center;">昵称</div>
+        <div class="col col-75" style="text-align:right;">
+            {{user.username}}
+        </div>
+    </div>
+   </div>
+<!--
+    <div class="row">
+        <div class="col" style="text-align:center;">账号</div>
+        <div class="col col-75" style="text-align:right;">
+            {{user.email}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col" style="text-align:center;">账号</div>
+        <div class="col col-75" style="text-align:right;">
+            {{user.email}}
+        </div>
+    </div>
+-->
+</ion-content>
+

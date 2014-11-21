@@ -15,10 +15,10 @@ define(['angular','services/page01Serv'], function (angular) {
         //page01Serv.articleLists($scope);
         page01Serv.query(function(articles) {
            $scope.articleLists = articles;
-            //console.log(articles);
+            console.log(articles);
         });
         $scope.goDetail = function(id){
-            $state.go('tab.page01_2', {articleId: id });
+            $state.go('page01_2', {articleId: id });
         };
         $scope.goCreate = function(){
             $state.go('page01_3', {});

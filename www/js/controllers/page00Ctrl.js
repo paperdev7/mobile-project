@@ -7,8 +7,12 @@ define(['angular','services/page00Serv'], function (angular) {
                         {'name':'회원가입','path':'#/tab/page00_3'},
                         {'name':'로그인','path':'#/tab/page00_1'}
                        ];
-
-        // This object will be filled by the form
+        $scope.user = $rootScope.user;
+            console.log($scope.user);
+        
+	})
+    .controller('page00_1Ctrl', function(page00Serv,$scope,$stateParams,$state,$rootScope) {
+           // This object will be filled by the form
         $scope.user = {};
 
         // Register the login() function
@@ -16,10 +20,10 @@ define(['angular','services/page00Serv'], function (angular) {
             page00Serv.login($scope.user,function(res){
                 $rootScope.user = res.user;
                 $rootScope.isLogin = true;
-                $state.go('tab.page00_2', {});
+                $state.go('tab.page00', {});
             },function(err){});
         };
-	})
+       })
     .controller('page00_2Ctrl', function(page00Serv,$scope,$stateParams,$state,$rootScope) {
            $scope.user = $rootScope.user;
             console.log($scope.user);

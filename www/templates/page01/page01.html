@@ -13,7 +13,8 @@
         <a class="item item-thumbnail-left" ng-repeat="article in articleLists" ng-click="goDetail(article._id)">
             <img ng-src="{{remoteServer+article.user.files[0].path}}" style="width:80px;height:80px;">
             <h2>{{article.user.name}}</h2>
-            <p>{{article.content}}</p>
+            <span>{{article.content}}</span>
+            <p>{{article.created}}</p>
         </a>
     </div>
 </ion-content>

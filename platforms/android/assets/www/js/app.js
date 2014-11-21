@@ -48,14 +48,10 @@ define(['angular','angularResource', 'angularIonic','nsPopover'
         }
       })
       // talking detail
-      .state('tab.page01_2', {
+      .state('page01_2', {
          url: '/page01_2/:articleId',
-         views: {
-           'talking': {
-              templateUrl: 'templates/page01/page01_2.html',
-              controller:'page01_2Ctrl'
-              }
-            }
+         templateUrl: 'templates/page01/page01_2.html',
+         controller:'page01_2Ctrl'
         })
         // talking create
       .state('page01_3', {
@@ -105,7 +101,7 @@ define(['angular','angularResource', 'angularIonic','nsPopover'
             views: {
                 'info': {
                     templateUrl: 'templates/page00/page00_1.html',
-                    controller:'page00Ctrl'
+                    controller:'page00_1Ctrl'
                 }
             }
         })

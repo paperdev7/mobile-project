@@ -11,7 +11,7 @@ define(['angular','services/page01Serv'], function (angular) {
         page01Serv.get({
             articleId: $stateParams.articleId
         }, function(article) {
-           // console.log(article);
+            console.log(article);
             $scope.article = article;
         });
 	});

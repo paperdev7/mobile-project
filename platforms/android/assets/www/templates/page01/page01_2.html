@@ -4,13 +4,33 @@
 </ion-header-bar>
 
 <ion-content class="has-header" padding="true" >
-   <div class="col-sm-6 col-md-4">
+
+   <div >
+        <div>
+            <a class="item item-thumbnail-left">
+                <img ng-src="{{remoteServer+article.user.files[0].path}}" style="width:80px;height:80px;">
+                <h2>{{article.user.name}}</h2>
+               
+            </a>
+        </div>
+        <hr>
+         <p>{{article.created}}</p>
         <div class="thumbnail">
-            <img ng-src="{{remoteServer+article.files[0].path}}">
+            <img ng-src="{{remoteServer+article.files[0].path}}" ng-show="article.files[0].path">
             <div class="caption">
                 <!--<h3>Thumbnail label</h3>-->
                 <p>{{article.content}}</p>
             </div>
         </div>
+        <hr>
     </div>
 </ion-content>
+<div class="bar bar-footer item-input-inset">
+     <label class="item-input-wrapper">
+        <i class="ion-ios7-chatboxes placeholder-icon"></i>
+        <textarea row="1" col="1" placeholder="댓글작성"></textarea>
+     </label>
+     <button class="button button-clear">
+        发送
+     </button>
+</div>

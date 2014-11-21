@@ -3,7 +3,7 @@ define(['angular','services/page01_3Serv'], function (angular) {
 
 
 	// A simple controller that fetches a list of data from a service
-	.controller('page01_3Ctrl', function($scope,$stateParams,page01_3Serv) {
+	.controller('page01_3Ctrl', function($scope,$stateParams,page01_3Serv,$rootScope) {
 		$scope.menuId = parseInt($stateParams.pid)-1;
         $scope.articleLists = [];
         $scope.remoteServer  = getRemoteServer()+"/images";
@@ -14,6 +14,7 @@ define(['angular','services/page01_3Serv'], function (angular) {
                     var article = new page01_3Serv({
                         title: this.title,
                         content: this.content//,
+                       // user:$rootScope.user
                         //files:$scope.files
                     });
 
